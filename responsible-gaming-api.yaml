@@ -1,0 +1,77 @@
+openapi: 3.0.3
+info:
+  title: Responsible Gaming API
+  version: 1.0.0
+  description: >
+    This API allows setting personal responsible gaming limits, such as financial loss caps, time limits,
+    and restriction of gambling categories. Intended for player protection and compliance systems.
+
+servers:
+  - url: https://api.example.com/v1
+
+paths:
+  /limits/loss:
+    post:
+      summary: Set loss limit for a player
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                playerId:
+                  type: string
+                maxLossAmount:
+                  type: number
+                  format: float
+              required:
+                - playerId
+                - maxLossAmount
+      responses:
+        '200':
+          description: Loss limit successfully set
+
+  /limits/time:
+    post:
+      summary: Set session time limit for a player
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                playerId:
+                  type: string
+                maxPlayTimeMinutes:
+                  type: integer
+              required:
+                - playerId
+                - maxPlayTimeMinutes
+      responses:
+        '200':
+          description: Time limit successfully set
+
+  /limits/categories:
+    post:
+      summary: Restrict allowed gambling categories
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                playerId:
+                  type: string
+                allowedCategories:
+                  type: array
+                  items:
+                    type: string
+              required:
+                - playerId
+                - allowedCategories
+      responses:
+        '200':
+          description: Category restrictions successfully applied
