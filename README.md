@@ -19,7 +19,8 @@ This portfolio project presents a RESTful API designed to support features for r
 ## How to Use
 
 1. Open the Swagger YAML file with [Swagger Editor](https://editor.swagger.io) or Redoc to explore the API endpoints.  
-2. Import BPMN/UML diagrams into [draw.io](https://app.diagrams.net) for viewing or editing.  
+2. Import BPMN/UML diagrams into [[draw.io](https://app.diagrams.net)](https://app.diagrams.net/?url=https://raw.githubusercontent.com/olegustymenko/BA_portfoilio_O_Ustymenko/main/RG_Set%20Limits%20by%20Player_FINAL.drawio
+) for viewing or editing.  
 3. Review the documentation to understand functional flow and system interactions.  
 
 ## Technologies Used
@@ -33,3 +34,4 @@ This portfolio project presents a RESTful API designed to support features for r
 ---
 
 This repository is a demonstration of business analysis work in the field of responsible gaming systems and may be expanded to include live mock server or frontend examples.
+
